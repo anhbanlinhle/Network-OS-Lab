@@ -4,3 +4,38 @@
 
 - Cũng yêu cầu trên, làm lại nhưng lọc kết quả là các file có phần đầu là “`dat`”.
 
+<h1>Solution</h1>
+
+<h2>Commands</h2>
+
+<h3>Command 1</h3>
+
+```sh
+ls -R | grep .txt
+```
+
+<h3>Command 2</h3>
+
+```sh
+ls -R | grep "^dat"
+```
+
+<h2>Results</h2>
+
+<h3>Command 1</h3>
+
+```sh
+(base) admin  Lynn-2 ∫ / ∫ % ls -R | grep .txt
+LICENSE.txt
+LICENSE.txt
+...
+```
+
+<h3>Command 2</h3>
+
+```sh
+(base) admin  Lynn-2 ∫ / ∫ % ls -R | grep "^dat"
+database.svg
+database.svg
+...
+```
