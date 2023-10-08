@@ -17,17 +17,23 @@ Lưu ý: Các file được tạo có nội dung được chép từ file `/etc/
 
 <h1>Solution</h1>
 
-<h3>Commands</h3>
+<h2>Commands</h2>
+
+<h3>Command 1</h3>
 
 ```sh
 mkdir lab lab/data lab/project
 ```
 
+<h3>Command 2</h3>
+
 ```sh
 cat /etc/passwd > lab/data/file1.txt > lab/data/file2.txt
 ```
 
-<h3>Results</h3>
+<h2>Results</h2>
+
+<h3>Command 1</h3>
 
 ```sh
 (base) admin  Lynn-2 ∫ ~/Desktop ∫ % mkdir lab lab/data lab/project
@@ -38,6 +44,9 @@ lab
 
 3 directories, 0 files
 ```
+
+<h3>Command 2</h3>
+
 ```sh
 (base) admin  Lynn-2 ∫ ~/Desktop ∫ % cat /etc/passwd > lab/data/file1.txt > lab/data/file2.txt
 (base) admin  Lynn-2 ∫ ~/Desktop ∫ % tree lab
