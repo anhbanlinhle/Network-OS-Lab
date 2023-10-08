@@ -13,7 +13,7 @@ Run the following commands:
 <br>
 
 ```sh
-mkdir lesson_xx lesson_xx/ubuntu lesson_xx/macos
+mkdir lesson_xx lesson_xx/linux lesson_xx/macos
 ```
 to create a new directory structure for your lesson
 - `xx`: lesson's index 
@@ -24,5 +24,5 @@ cp TEMPLATE.md lesson_xx/os/task_yy.md
 ```
 to create a markdown file from template for your task
 - `xx`: lesson's index
-- `os`: `ubuntu`/`macos`
+- `os`: `linux`/`macos`
 - `yy`: task's index
