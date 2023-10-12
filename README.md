@@ -25,6 +25,7 @@ to create a new directory structure for your lesson
 - `xx`: lesson's index 
 <br>
 <br>
+
 ```sh
 ./scripts/task.sh
 ```
