@@ -16,21 +16,13 @@ Hãy giải thích các hiện tượng diễn ra trên màn hình và nội dun
 <h3>Command 1</h3>
 
 ```sh
-command
+cat nofile > output.txt 2>&1
 ```
 
 <h3>Command 2</h3>
 
 ```sh
-command
-```
-
-<h3>...</h3>
-
-<h3>Command n</h3>
-
-```sh
-command
+cat nofile 2>&1 > output.txt
 ```
 
 <h2>Solution</h2>
@@ -38,19 +30,30 @@ command
 <h3>Command 1</h3>
 
 ```sh
-executed command results
+(base) admin  Lynn-2 ∫ ~/Desktop ∫ cat nofile > output.txt 2>&1
+(base) admin  Lynn-2 ∫ ~/Desktop ∫ cat output.txt
+cat: nofile: No such file or directory
 ```
+
+- Không tồn tại file `nofile` nên command `cat` không thể đọc được
+- Operator `>` đầu tiên sẽ chuyển hướng thông báo lỗi từ `stdout` vào nội dung file
+`output.txt`
+- Operator `2>&1` thứ hai sẽ chuyển hướng thông báo lỗi từ `stderr` ra `stdout`, nhưng
+ở đây `stderr` đã chuyển vào file `output.txt` rồi
+- Kiểm tra nội dung file `output.txt` ta sẽ thấy thông báo lỗi của command ban đầu
 
 <h3>Command 2</h3>
 
 ```sh
-executed command results
+(base) admin  Lynn-2 ∫ ~/Desktop ∫ cat nofile 2>&1 > output.txt
+cat: nofile: No such file or directory
+(base) admin  Lynn-2 ∫ ~/Desktop ∫ cat output.txt
+(base) admin  Lynn-2 ∫ ~/Desktop ∫ 
 ```
 
-<h3>...</h3>
-
-<h3>Command n</h3>
-
-```sh
-executed command results
-```
+- Không tồn tại file `nofile` nên command `cat` không thể đọc được
+- Operator `2>&1` đầu tiên sẽ chuyển hướng thông báo lỗi từ `stderr` ra `stdout`, chính
+là thông báo lỗi gặp phải ghi dùng command `cat` đọc file `nofile`
+- Operator `>` thứ hai sẽ chuyển hướng thông báo đầu ra của `stdout` vào file
+`output.txt`, nhưng ở đây `stdout` đang trống
+- Kiểm tra nội dung file `output.txt` ta sẽ thấy rỗng
