@@ -11,21 +11,13 @@ Thực hiện như trên nhưng thay tỷ lệ dùng CPU thành tỷ lệ dùng 
 <h3>Command 1</h3>
 
 ```sh
-command
+ps aux | sort -k3 -r | head -n 11 | awk '{print $2, $3}'
 ```
 
 <h3>Command 2</h3>
 
 ```sh
-command
-```
-
-<h3>...</h3>
-
-<h3>Command n</h3>
-
-```sh
-command
+ps aux | sort -k4 -r | head -n 11 | awk '{print $2, $4}'
 ```
 
 <h2>Solution</h2>
@@ -33,19 +25,33 @@ command
 <h3>Command 1</h3>
 
 ```sh
-executed command results
+lynn@lynn-server:~$ ps aux | sort -k3 -r | head -n 11 | awk '{print $2, $3}'
+PID %CPU
+2838 3.9
+3387 0.6
+3608 0.3
+3803 0.2
+3173 0.2
+859 0.2
+843 0.2
+1 0.2
+3202 0.1
+3032 0.1
 ```
 
 <h3>Command 2</h3>
 
 ```sh
-executed command results
-```
-
-<h3>...</h3>
-
-<h3>Command n</h3>
-
-```sh
-executed command results
+lynn@lynn-server:~$ ps aux | sort -k4 -r | head -n 11 | awk '{print $2, $4}'
+PID %MEM
+2838 2.1
+3365 0.5
+3242 0.4
+3202 0.4
+3089 0.3
+3608 0.3
+3803 0.3
+3294 0.2
+2918 0.2
+2907 0.2
 ```
