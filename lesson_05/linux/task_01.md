@@ -6,6 +6,22 @@ Giả sử, quản trị mạng **A** được giao nhiệm vụ quản trị c�
 
 -   Hãy thiết lập server `R02` sao cho máy tính PC có khả năng đăng nhập từ xa như `root` thông qua `SSH` vào server trên mà không cần mật khẩu.
 
+# Prerequisites
+
+Install OpenSSH on both `client` and `server`
+
+## Server - Linux
+
+```sh
+sudo apt install openssh-server
+```
+
+## Client - MacOS
+
+```sh
+brew install openssh
+```
+
 <h1>Solution</h1>
 
 <h2>Commands</h2>
