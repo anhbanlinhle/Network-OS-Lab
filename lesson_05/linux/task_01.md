@@ -4,8 +4,6 @@ Giả sử, quản trị mạng **A** được giao nhiệm vụ quản trị c�
 
 -   Trên server `R01`, tạo tài khoản `user01` và cấu hình server này sao cho từ các máy tính khác có thể đăng nhập từ xa chỉ bằng tài khoản của `user01` thông qua dịch vụ `SSH`.
 
--   Hãy thiết lập server `R02` sao cho máy tính PC có khả năng đăng nhập từ xa như `root` thông qua `SSH` vào server trên mà không cần mật khẩu.
-
 # Prerequisites
 
 Install OpenSSH on both `client` and `server`
@@ -22,48 +20,3 @@ sudo apt install openssh-server
 brew install openssh
 ```
 
-<h1>Solution</h1>
-
-<h2>Commands</h2>
-
-<h3>Command 1</h3>
-
-```sh
-command
-```
-
-<h3>Command 2</h3>
-
-```sh
-command
-```
-
-<h3>...</h3>
-
-<h3>Command n</h3>
-
-```sh
-command
-```
-
-<h2>Solution</h2>
-
-<h3>Command 1</h3>
-
-```sh
-executed command results
-```
-
-<h3>Command 2</h3>
-
-```sh
-executed command results
-```
-
-<h3>...</h3>
-
-<h3>Command n</h3>
-
-```sh
-executed command results
-```
