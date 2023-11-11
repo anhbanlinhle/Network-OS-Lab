@@ -18,22 +18,82 @@
 
 ### Command 1
 
+Check if any group with **gid = 550** exists
+
 ```sh
-command
+grep 550 test_group
 ```
 
 ### Command 2
 
+Create user **tux** with **id = 600** and **gid = 550**
+
 ```sh
-command
+sudo useradd -u 600 -g 550 tux
 ```
 
-### ...
+### Command 3
 
-### Command n
+Check if user **tux** created successfully
 
 ```sh
-command
+grep tux /etc/passwd
+```
+
+### Command 4
+
+Modify user **tux**'s home directory
+
+```sh
+sudo usermod -d /home/tux_alt tux
+```
+
+### Command 5
+
+Check user **tux**'s new home directory
+
+```sh
+grep tux /etc/passwd
+```
+
+### Command 6
+
+We need to create a new directory since `usermod` don't do it by default unless `-m` option was added
+
+```sh
+ls /home/
+```
+
+### Command 7
+
+`etc/skel`'s contents were not coppied since `usermod` don't do it by default unless `-m` option was added
+
+```sh
+ls -a /home/tux_alt/
+```
+
+### Command 8
+
+Create new group **wheel**
+
+```sh
+sudo groupadd wheel
+```
+
+### Command 9
+
+Add user **tux** to group **wheel**
+
+```sh
+sudo usermod -aG wheel tux
+```
+
+### Command 10
+
+Check if user **tux** was added to group **wheel**
+
+```sh
+groups tux
 ```
 
 ## Solution
