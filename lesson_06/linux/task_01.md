@@ -24,15 +24,19 @@ Check if any group with **gid = 550** exists
 grep 550 /etc/group
 ```
 
+If don't, create a new group with **gid = 550**
+
+```sh
+sudo groupadd -g 550 test_group
+```
+
 ### Command 2
 
 Create user **tux** with **id = 600** and **gid = 550**
 
 ```sh
-sudo useradd -u 600 -g 550 tux
+sudo useradd -m -u 600 -g 550 tux
 ```
-
-### Command 3
 
 Check if user **tux** created successfully
 
@@ -40,7 +44,13 @@ Check if user **tux** created successfully
 grep tux /etc/passwd
 ```
 
-### Command 4
+### Command 3
+
+Check user **tux**'s old home directory
+
+```sh
+grep tux /etc/passwd
+```
 
 Modify user **tux**'s home directory
 
@@ -48,33 +58,39 @@ Modify user **tux**'s home directory
 sudo usermod -d /home/tux_alt tux
 ```
 
-### Command 5
-
 Check user **tux**'s new home directory
 
 ```sh
 grep tux /etc/passwd
 ```
 
-### Command 6
+### Command 4
 
-We need to create a new directory since `usermod` don't do it by default unless `-m` option was added
+Check if any new home directory is created
 
 ```sh
 ls /home/
 ```
 
-### Command 7
+We need to create a new directory since `usermod` don't do it by default unless `-m` option was added
 
-`etc/skel`'s contents were not coppied since `usermod` don't do it by default unless `-m` option was added
+### Command 5
+
+Check **tux**'s old home directory's content
+
+```sh
+ls -a /home/tux/
+```
+
+Check **tux**'s new home directory's content
 
 ```sh
 ls -a /home/tux_alt/
 ```
 
-*In this case tux's old home directory was created with user tux and has `/etc/skel` content inside it*
+`etc/skel`'s contents were not coppied since `usermod` don't do it by default unless `-m` option was added
 
-### Command 8
+### Command 6
 
 Create new group **wheel**
 
@@ -82,15 +98,19 @@ Create new group **wheel**
 sudo groupadd wheel
 ```
 
-### Command 9
+Check if group **wheel** created successfully
+
+```sh
+grep wheel /etc/group
+```
+
+### Command 7
 
 Add user **tux** to group **wheel**
 
 ```sh
 sudo usermod -aG wheel tux
 ```
-
-### Command 10
 
 Check if user **tux** was added to group **wheel**
 
