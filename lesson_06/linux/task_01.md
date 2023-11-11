@@ -79,13 +79,13 @@ We need to create a new directory since `usermod` don't do it by default unless 
 Check **tux**'s old home directory's content
 
 ```sh
-ls -a /home/tux/
+sudo ls -a /home/tux/
 ```
 
 Check **tux**'s new home directory's content
 
 ```sh
-ls -a /home/tux_alt/
+sudo ls -a /home/tux_alt/
 ```
 
 `etc/skel`'s contents were not coppied since `usermod` don't do it by default unless `-m` option was added
@@ -120,3 +120,63 @@ groups tux
 
 ## Solution
 
+### Command 1
+
+```sh
+lynn@lynn-server:~$ grep 550 /etc/group
+test_group:x:550:
+```
+
+### Command 2
+
+```sh
+lynn@lynn-server:~$ grep tux /etc/passwd
+tux:x:600:550::/home/tux:/bin/bash
+```
+
+### Command 3
+
+```sh
+lynn@lynn-server:~$ grep tux /etc/passwd
+tux:x:600:550::/home/tux:/bin/bash
+```
+
+```sh
+lynn@lynn-server:~$ grep tux /etc/passwd
+tux:x:600:550::/home/tux_alt:/bin/bash
+```
+
+### Command 4
+
+```sh
+lynn@lynn-server:~$ ls /home
+lynn  tux  user01
+```
+
+
+### Command 5
+
+
+```sh
+lynn@lynn-server:~$ sudo ls -a /home/tux
+.  ..  .bash_logout  .bashrc  .profile
+```
+
+```sh
+lynn@lynn-server:~$ sudo ls -a /home/tux_alt
+.  ..
+```
+
+### Command 6
+
+```sh
+lynn@lynn-server:~$ grep wheel /etc/group
+wheel:x:1002:tux
+```
+
+### Command 7
+
+```sh
+lynn@lynn-server:~$ groups tux
+tux : tux test_group wheel
+```
