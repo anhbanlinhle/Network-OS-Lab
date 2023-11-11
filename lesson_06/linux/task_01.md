@@ -118,7 +118,7 @@ Check if user **tux** was added to group **wheel**
 groups tux
 ```
 
-## Solution
+## Results
 
 ### Command 1
 
