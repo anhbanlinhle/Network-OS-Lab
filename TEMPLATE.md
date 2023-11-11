@@ -1,24 +1,30 @@
 |Bookmarks <a name=bookmarks></a>
 |-
+|[Requirements](#requirements)
+|[Solutions](#solutions)
+|[Commands](#commands)
+|[Results](#results)
 
-# Requirements
+
+
+# <a name="requirements"/> Requirements [↑](#bookmarks) 
 
 - Requirement 1
 - Requirement 2
 - ...
 - Requirement n
 
-# Solution
+# <a name="solutions"/>  Solutions 
 
-## Commands
+## <a name="commands"/>  Commands
 
-### Command 1
+### Command 1 [↑](#bookmarks)
 
 ```sh
 command
 ```
 
-### Command 2
+### Command 2 [↑](#bookmarks)
 
 ```sh
 command
@@ -26,21 +32,21 @@ command
 
 ### ...
 
-### Command n
+### Command n [↑](#bookmarks)
 
 ```sh
 command
 ```
 
-## Solution
+## <a name="results"/>  Results
 
-### Command 1
+### Command 1 [↑](#bookmarks)
 
 ```sh
 executed command results
 ```
 
-### Command 2
+### Command 2 [↑](#bookmarks)
 
 ```sh
 executed command results
