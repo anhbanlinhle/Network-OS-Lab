@@ -74,8 +74,6 @@ groups
 
 ### Command 1
 
-Create new group **sales**
-
 ```sh
 lynn@lynn-server:~$ grep sales /etc/group
 sales:x:1003:tux
