@@ -178,5 +178,5 @@ wheel:x:1002:tux
 
 ```sh
 lynn@lynn-server:~$ groups tux
-tux : tux test_group wheel
+tux : test_group wheel
 ```

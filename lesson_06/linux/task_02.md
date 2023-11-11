@@ -69,3 +69,44 @@ Check **tux**'s new groups order
 ```sh
 groups
 ```
+
+## Results
+
+### Command 1
+
+Create new group **sales**
+
+```sh
+lynn@lynn-server:~$ grep sales /etc/group
+sales:x:1003:tux
+```
+
+### Command 2
+
+```sh
+lynn@lynn-server:~$ sudo gpasswd -a tux sales
+Adding user tux to group sales
+```
+
+```sh
+lynn@lynn-server:~$ groups tux
+tux : test_group wheel sales
+```
+
+### Command 3
+
+```sh
+lynn@lynn-server:~$ su - tux
+Password: 
+$
+```
+
+```sh
+$ groups
+test_group wheel sales
+```
+
+```sh
+$ groups
+sales test_group wheel
+```
