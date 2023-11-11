@@ -1,9 +1,18 @@
-|Bookmarks <a name=bookmarks></a>
-|-
-|[Requirements](#requirements)
-|[Solutions](#solutions)
-|[Commands](#commands)
-|[Results](#results)
+# Bookmarks <a name=bookmarks></a>
+
+- [Requirements](#requirements)
+
+- [Solutions](#solutions)
+
+  - [Commands](#commands)
+    - [Command 1](#command-1-)
+    - [Command 2](#command-2-)
+    - [Command n](#command-n-)
+
+  - [Results](#results)
+    - [Result of Command 1](#command-1--1)
+    - [Result of Command 2](#command-2--1)
+    - [Result of Command n](#command-n--1)
 
 
 
@@ -18,13 +27,13 @@
 
 ## <a name="commands"/>  Commands
 
-### Command 1 [↑](#bookmarks)
+### <a name="command-1-" /> Command 1 [↑](#bookmarks)
 
 ```sh
 command
 ```
 
-### Command 2 [↑](#bookmarks)
+### <a name="command-2-" /> Command 2 [↑](#bookmarks)
 
 ```sh
 command
@@ -32,7 +41,7 @@ command
 
 ### ...
 
-### Command n [↑](#bookmarks)
+### <a name="command-n-" /> Command n [↑](#bookmarks)
 
 ```sh
 command
@@ -40,13 +49,13 @@ command
 
 ## <a name="results"/>  Results
 
-### Command 1 [↑](#bookmarks)
+### <a name="command-1--1" /> Command 1 [↑](#bookmarks)
 
 ```sh
 executed command results
 ```
 
-### Command 2 [↑](#bookmarks)
+### <a name="command-2--1" /> Command 2 [↑](#bookmarks)
 
 ```sh
 executed command results
@@ -54,7 +63,7 @@ executed command results
 
 ### ...
 
-### Command n [↑](#bookmarks)
+### <a name="command-n--1" /> Command n [↑](#bookmarks)
 
 ```sh
 executed command results
