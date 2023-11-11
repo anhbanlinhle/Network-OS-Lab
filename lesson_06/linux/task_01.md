@@ -21,7 +21,7 @@
 Check if any group with **gid = 550** exists
 
 ```sh
-grep 550 test_group
+grep 550 /etc/group
 ```
 
 ### Command 2
@@ -72,6 +72,8 @@ ls /home/
 ls -a /home/tux_alt/
 ```
 
+*In this case tux's old home directory was created with user tux and has `/etc/skel` content inside it*
+
 ### Command 8
 
 Create new group **wheel**
@@ -98,22 +100,3 @@ groups tux
 
 ## Solution
 
-### Command 1
-
-```sh
-executed command results
-```
-
-### Command 2
-
-```sh
-executed command results
-```
-
-### ...
-
-### Command n
-
-```sh
-executed command results
-```
