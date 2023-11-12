@@ -73,5 +73,20 @@ grep share /etc/group
 ### Command 1
 
 ```sh
+lynn@lynn-server:~$ grep alt_usr /etc/passwd
+alt_usr:x:1111:2222::/home/alt_usr:/bin/sh
+```
 
+### Command 2
+
+```sh
+lynn@lynn-server:~$ grep alt_grp /etc/group
+alt_grp:x:2222:alt_usr
+```
+
+### Command 3
+
+```sh
+lynn@lynn-server:~$ grep share /etc/group
+share:x:3333:tux
 ```
