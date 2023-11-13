@@ -15,25 +15,34 @@
     - [Result of Command n](#command-n--1)
 
 
+<a name=requirements/>
 
-# <a name="requirements"/> Requirements [↑](#bookmarks) 
+# Requirements [↑](#bookmarks) 
 
 - Requirement 1
 - Requirement 2
 - ...
 - Requirement n
 
-# <a name="solutions"/>  Solutions 
+<a name=solutions/>
 
-## <a name="commands"/>  Commands
+# Solutions 
 
-### <a name="command-1-" /> Command 1 [↑](#bookmarks)
+<a name=commands/>
+
+## Commands
+
+<a name=command-1/>
+
+### Command 1 [↑](#bookmarks)
 
 ```sh
 command
 ```
 
-### <a name="command-2-" /> Command 2 [↑](#bookmarks)
+<a name=command-2/>
+
+### Command 2 [↑](#bookmarks)
 
 ```sh
 command
@@ -41,21 +50,29 @@ command
 
 ### ...
 
-### <a name="command-n-" /> Command n [↑](#bookmarks)
+<a name=command-n/>
+
+### Command n [↑](#bookmarks)
 
 ```sh
 command
 ```
 
-## <a name="results"/>  Results
+<a name=results/>
 
-### <a name="command-1--1" /> Command 1 [↑](#bookmarks)
+## Results
+
+<a name=result-1/>
+
+### Command 1 [↑](#bookmarks)
 
 ```sh
 executed command results
 ```
 
-### <a name="command-2--1" /> Command 2 [↑](#bookmarks)
+<a name=result-2/>
+
+### Command 2 [↑](#bookmarks)
 
 ```sh
 executed command results
@@ -63,7 +80,9 @@ executed command results
 
 ### ...
 
-### <a name="command-n--1" /> Command n [↑](#bookmarks)
+<a name=result-n/>
+
+### Command n [↑](#bookmarks)
 
 ```sh
 executed command results
