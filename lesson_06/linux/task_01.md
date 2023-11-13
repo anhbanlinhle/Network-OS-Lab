@@ -170,7 +170,7 @@ groups tux
 
 <a name="result-1"/>
 
-### Command 1
+### Result of Command 1
 
 ```sh
 lynn@lynn-server:~$ grep 550 /etc/group
@@ -179,7 +179,7 @@ test_group:x:550:
 
 <a name="result-2"/>
 
-### Command 2
+### Result of Command 2
 
 ```sh
 lynn@lynn-server:~$ grep tux /etc/passwd
@@ -188,7 +188,7 @@ tux:x:600:550::/home/tux:/bin/bash
 
 <a name="result-3"/>
 
-### Command 3
+### Result of Command 3
 
 ```sh
 lynn@lynn-server:~$ grep tux /etc/passwd
@@ -202,7 +202,7 @@ tux:x:600:550::/home/tux_alt:/bin/bash
 
 <a name="result-4"/>
 
-### Command 4
+### Result of Command 4
 
 ```sh
 lynn@lynn-server:~$ ls /home
@@ -211,7 +211,7 @@ lynn  tux  user01
 
 <a name="result-5"/>
 
-### Command 5
+### Result of Command 5
 
 ```sh
 lynn@lynn-server:~$ sudo ls -a /home/tux
@@ -225,7 +225,7 @@ lynn@lynn-server:~$ sudo ls -a /home/tux_alt
 
 <a name="result-6"/>
 
-### Command 6
+### Result of Command 6
 
 ```sh
 lynn@lynn-server:~$ grep wheel /etc/group
@@ -234,7 +234,7 @@ wheel:x:1002:tux
 
 <a name="result-7"/>
 
-### Command 7
+### Result of Command 7
 
 ```sh
 lynn@lynn-server:~$ groups tux
