@@ -47,8 +47,42 @@ Edit **PASS_MAX_DAYS** in **/etc/login.defs**
 sudo vi /etc/login.defs
 ```
 
+File content
+
+```sh
+PASS_MAX_DAYS    5
+```
+
 Check current default **PASS_MAX_DAYS** for all user
 
 ```sh
 sudo grep PASS_MAX_DAYS /etc/login.defs
+```
+
+## Results
+
+### Command 1
+
+```sh
+lynn@lynn-server:~$ sudo grep SHELL= /etc/default/useradd
+SHELL=/bin/bash
+```
+
+```sh
+lynn@lynn-server:~$ sudo grep SHELL= /etc/default/useradd
+SHELL=/bin/sh
+```
+
+### Command 2
+
+```sh
+lynn@lynn-server:~$ sudo grep PASS_MAX_DAYS /etc/login.defs
+#	PASS_MAX_DAYS	Maximum number of days a password may be used.
+PASS_MAX_DAYS	99999
+```
+
+```sh
+lynn@lynn-server:~$ sudo grep PASS_MAX_DAYS /etc/login.defs
+#	PASS_MAX_DAYS	Maximum number of days a password may be used.
+PASS_MAX_DAYS	5
 ```
