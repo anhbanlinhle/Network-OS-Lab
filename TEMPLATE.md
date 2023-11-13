@@ -1,4 +1,6 @@
-# Bookmarks <a name=bookmarks></a>
+<a name="bookmarks"/>
+
+# Bookmarks
 
 - [Requirements](#requirements)
 
