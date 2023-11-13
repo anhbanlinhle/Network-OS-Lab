@@ -8,3 +8,47 @@ thay đổi file trong `/etc/defaults/`)
 - Soạn thảo `/etc/login.defs` và thay đổi tham số mặc định
 `PASS_MAX_DAYS` và do đó người dùng mới sẽ phải thay
 đổi mật khẩu của mình theo định kỳ 5 ngày
+
+# Solution
+
+## Commands
+
+### Command 1
+
+Check previous default shell for all users 
+
+```sh
+sudo grep SHELL= /etc/default/useradd
+```
+
+Change default shell to **/bin/sh** for all users
+
+```sh
+sudo useradd -D -s /bin/sh
+```
+
+Check current default shell for all users 
+
+```sh
+sudo grep SHELL= /etc/default/useradd
+```
+
+### Command 2
+
+Check previous default **PASS_MAX_DAYS** for all user
+
+```sh
+sudo grep PASS_MAX_DAYS /etc/login.defs
+```
+
+Edit **PASS_MAX_DAYS** in **/etc/login.defs**
+
+```sh
+sudo vi /etc/login.defs
+```
+
+Check current default **PASS_MAX_DAYS** for all user
+
+```sh
+sudo grep PASS_MAX_DAYS /etc/login.defs
+```
