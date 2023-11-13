@@ -5,14 +5,14 @@
 - [Solutions](#solutions)
 
   - [Commands](#commands)
-    - [Command 1](#command-1-)
-    - [Command 2](#command-2-)
-    - [Command n](#command-n-)
+    - [Command 1](#command-1)
+    - [Command 2](#command-2)
+    - [Command n](#command-n)
 
   - [Results](#results)
-    - [Result of Command 1](#command-1--1)
-    - [Result of Command 2](#command-2--1)
-    - [Result of Command n](#command-n--1)
+    - [Result of Command 1](#result-1)
+    - [Result of Command 2](#result-2)
+    - [Result of Command n](#result-n)
 
 
 <a name=requirements/>
