@@ -50,7 +50,7 @@
 
 <a name="command-1"/>
 
-### Command 1
+### Command 1 [↑](#bookmarks) [↓](#result-1)
 
 Check if any group with **gid = 550** exists
 
@@ -66,7 +66,7 @@ sudo groupadd -g 550 test_group
 
 <a name="command-2"/>
 
-### Command 2
+### Command 2 [↑](#bookmarks) [↓](#result-2)
 
 Create user **tux** with **id = 600** and **gid = 550**
 
@@ -82,7 +82,7 @@ grep tux /etc/passwd
 
 <a name="command-3"/>
 
-### Command 3
+### Command 3 [↑](#bookmarks) [↓](#result-3)
 
 Check user **tux**'s old home directory
 
@@ -104,7 +104,7 @@ grep tux /etc/passwd
 
 <a name="command-4"/>
 
-### Command 4
+### Command 4 [↑](#bookmarks) [↓](#result-4)
 
 Check if any new home directory is created
 
@@ -116,7 +116,7 @@ We need to create a new directory since `usermod` don't do it by default unless 
 
 <a name="command-5"/>
 
-### Command 5
+### Command 5 [↑](#bookmarks) [↓](#result-5)
 
 Check **tux**'s old home directory's content
 
@@ -134,7 +134,7 @@ sudo ls -a /home/tux_alt/
 
 <a name="command-6"/>
 
-### Command 6
+### Command 6 [↑](#bookmarks) [↓](#result-6)
 
 Create new group **wheel**
 
@@ -150,7 +150,7 @@ grep wheel /etc/group
 
 <a name="command-7"/>
 
-### Command 7
+### Command 7 [↑](#bookmarks) [↓](#result-7)
 
 Add user **tux** to group **wheel**
 
@@ -170,7 +170,7 @@ groups tux
 
 <a name="result-1"/>
 
-### Result of Command 1
+### Result of Command 1 [↑](#command-1)
 
 ```sh
 lynn@lynn-server:~$ grep 550 /etc/group
@@ -179,7 +179,7 @@ test_group:x:550:
 
 <a name="result-2"/>
 
-### Result of Command 2
+### Result of Command 2 [↑](#command-2)
 
 ```sh
 lynn@lynn-server:~$ grep tux /etc/passwd
@@ -188,7 +188,7 @@ tux:x:600:550::/home/tux:/bin/bash
 
 <a name="result-3"/>
 
-### Result of Command 3
+### Result of Command 3 [↑](#command-3)
 
 ```sh
 lynn@lynn-server:~$ grep tux /etc/passwd
@@ -202,7 +202,7 @@ tux:x:600:550::/home/tux_alt:/bin/bash
 
 <a name="result-4"/>
 
-### Result of Command 4
+### Result of Command 4 [↑](#command-4)
 
 ```sh
 lynn@lynn-server:~$ ls /home
@@ -211,7 +211,7 @@ lynn  tux  user01
 
 <a name="result-5"/>
 
-### Result of Command 5
+### Result of Command 5 [↑](#command-5)
 
 ```sh
 lynn@lynn-server:~$ sudo ls -a /home/tux
@@ -225,7 +225,7 @@ lynn@lynn-server:~$ sudo ls -a /home/tux_alt
 
 <a name="result-6"/>
 
-### Result of Command 6
+### Result of Command 6 [↑](#command-6)
 
 ```sh
 lynn@lynn-server:~$ grep wheel /etc/group
@@ -234,7 +234,7 @@ wheel:x:1002:tux
 
 <a name="result-7"/>
 
-### Result of Command 7
+### Result of Command 7 [↑](#command-7)
 
 ```sh
 lynn@lynn-server:~$ groups tux
