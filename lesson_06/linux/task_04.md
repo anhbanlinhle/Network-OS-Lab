@@ -97,3 +97,63 @@ sudo grep tux /etc/shadow
 ```
 
 ## Results
+
+### Command 1
+
+```sh
+lynn@lynn-server:~$ sudo chage -l tux
+Last password change				                    	: Nov 11, 2023
+Password expires					                        : never
+Password inactive					                        : never
+Account expires						                        : never
+Minimum number of days between password change		: 0
+Maximum number of days between password change		: 99999
+Number of days of warning before password expires	: 7
+```
+
+```sh
+lynn@lynn-server:~$ sudo chage -l tux
+Last password change		                      		: Nov 11, 2023
+Password expires	                                : never
+Password inactive					                        : never
+Account expires						                        : Dec 31, 2023
+Minimum number of days between password change		: 0
+Maximum number of days between password change		: 99999
+Number of days of warning before password expires	: 7
+```
+
+### Command 2
+
+```sh
+lynn@lynn-server:~$ sudo grep tux /etc/shadow
+tux:encrypted_password:19672:0:99999:7:::
+```
+
+```sh
+lynn@lynn-server:~$ sudo grep tux /etc/shadow
+tux:!encrypted_password:19672:0:99999:7:::
+```
+
+### Command 3
+
+```sh
+lynn@lynn-server:~$ grep tux /etc/passwd
+tux:x:600:550::/home/tux:/bin/sh
+```
+
+```sh
+lynn@lynn-server:~$ grep tux /etc/passwd
+tux:x:600:550::/home/tux:/bin/false
+```
+
+### Command 4
+
+```sh
+lynn@lynn-server:~$ sudo grep tux /etc/shadow
+tux:encrypted_password:19672:0:99999:7:::
+```
+
+```sh
+lynn@lynn-server:~$ sudo grep tux /etc/shadow
+tux:encrypted_password:19672:0:1:7:::
+```
