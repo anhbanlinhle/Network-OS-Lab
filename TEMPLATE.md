@@ -66,7 +66,7 @@ command
 
 <a name="result-1"/>
 
-### Command 1 [↑](#bookmarks)
+### Result of Command 1 [↑](#bookmarks)
 
 ```sh
 executed command results
@@ -74,7 +74,7 @@ executed command results
 
 <a name="result-2"/>
 
-### Command 2 [↑](#bookmarks)
+### Result of Command 2 [↑](#bookmarks)
 
 ```sh
 executed command results
@@ -84,7 +84,7 @@ executed command results
 
 <a name="result-n"/>
 
-### Command n [↑](#bookmarks)
+### Result of Command n [↑](#bookmarks)
 
 ```sh
 executed command results
