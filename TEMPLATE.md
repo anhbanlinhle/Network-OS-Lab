@@ -15,7 +15,7 @@
     - [Result of Command n](#result-n)
 
 
-<a name=requirements/>
+<a name="requirements"/>
 
 # Requirements [↑](#bookmarks) 
 
@@ -24,15 +24,15 @@
 - ...
 - Requirement n
 
-<a name=solutions/>
+<a name="solutions"/>
 
 # Solutions 
 
-<a name=commands/>
+<a name="commands"/>
 
 ## Commands
 
-<a name=command-1/>
+<a name="command-1"/>
 
 ### Command 1 [↑](#bookmarks)
 
@@ -40,7 +40,7 @@
 command
 ```
 
-<a name=command-2/>
+<a name="command-2"/>
 
 ### Command 2 [↑](#bookmarks)
 
@@ -50,7 +50,7 @@ command
 
 ### ...
 
-<a name=command-n/>
+<a name="command-n"/>
 
 ### Command n [↑](#bookmarks)
 
@@ -58,11 +58,11 @@ command
 command
 ```
 
-<a name=results/>
+<a name="results"/>
 
 ## Results
 
-<a name=result-1/>
+<a name="result-1"/>
 
 ### Command 1 [↑](#bookmarks)
 
@@ -70,7 +70,7 @@ command
 executed command results
 ```
 
-<a name=result-2/>
+<a name="result-2"/>
 
 ### Command 2 [↑](#bookmarks)
 
@@ -80,7 +80,7 @@ executed command results
 
 ### ...
 
-<a name=result-n/>
+<a name="result-n"/>
 
 ### Command n [↑](#bookmarks)
 
