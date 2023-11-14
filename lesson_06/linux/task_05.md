@@ -1,3 +1,21 @@
+<a name="bookmarks"/>
+
+# Bookmarks
+
+- [Requirements](#requirements)
+
+- [Solutions](#solutions)
+
+  - [Commands](#commands)
+    - [Command 1](#command-1)
+    - [Command 2](#command-2)
+
+  - [Results](#results)
+    - [Result of Command 1](#result-1)
+    - [Result of Command 2](#result-2)
+
+<a name="requirements"/>
+
 # Requirements
 
 - Sử dụng `useradd –D` để thay đổi các thiết lập mặc định
@@ -9,11 +27,17 @@ thay đổi file trong `/etc/defaults/`)
 `PASS_MAX_DAYS` và do đó người dùng mới sẽ phải thay
 đổi mật khẩu của mình theo định kỳ 5 ngày
 
+<a name="solutions"/>
+
 # Solution
+
+<a name="commands"/>
 
 ## Commands
 
-### Command 1
+<a name="command-1"/>
+
+### Command 1 [↑](#bookmarks) [↓](#result-1)
 
 Check previous default shell for all users 
 
@@ -33,7 +57,9 @@ Check current default shell for all users
 sudo grep SHELL= /etc/default/useradd
 ```
 
-### Command 2
+<a name="command-2"/>
+
+### Command 2 [↑](#bookmarks) [↓](#result-2)
 
 Check previous default **PASS_MAX_DAYS** for all user
 
@@ -59,9 +85,13 @@ Check current default **PASS_MAX_DAYS** for all user
 sudo grep PASS_MAX_DAYS /etc/login.defs
 ```
 
+<a name="results"/>
+
 ## Results
 
-### Command 1
+<a name="result-1"/>
+
+### Result of Command 1 [↑](#command-1)
 
 ```sh
 lynn@lynn-server:~$ sudo grep SHELL= /etc/default/useradd
@@ -73,7 +103,9 @@ lynn@lynn-server:~$ sudo grep SHELL= /etc/default/useradd
 SHELL=/bin/sh
 ```
 
-### Command 2
+<a name="result-2"/>
+
+### Result of Command 2 [↑](#command-2)
 
 ```sh
 lynn@lynn-server:~$ sudo grep PASS_MAX_DAYS /etc/login.defs
