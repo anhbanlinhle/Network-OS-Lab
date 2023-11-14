@@ -1,3 +1,25 @@
+<a name="bookmarks"/>
+
+# Bookmarks
+
+- [Requirements](#requirements)
+
+- [Solutions](#solutions)
+
+  - [Commands](#commands)
+    - [Command 1](#command-1)
+    - [Command 2](#command-2)
+    - [Command 3](#command-3)
+    - [Command 4](#command-4)
+
+  - [Results](#results)
+    - [Result of Command 1](#result-1)
+    - [Result of Command 2](#result-2)
+    - [Result of Command 3](#result-3)
+    - [Result of Command 4](#result-4)
+
+<a name="requirements"/>
+
 # Requirements
 
 - Thay đổi tham số ngày hết hạn của tài khoản người dùng
@@ -12,11 +34,17 @@ mặc định của người dùng thành `/bin/false`.
 - Thay đổi tham số `PASS_MAX_DAYS` của người dùng `tux`
 thành 1 trong file `/etc/shadow`.
 
+<a name="solutions"/>
+
 # Solution
+
+<a name="commands"/>
 
 ## Commands
 
-### Command 1
+<a name="command-1"/>
+
+### Command 1 [↑](#bookmarks) [↓](#result-1)
 
 Check previous account expire day of **tux**
 
@@ -36,7 +64,9 @@ Check current account expire day of **tux**
 sudo chage -l tux
 ```
 
-### Command 2
+<a name="command-2"/>
+
+### Command 2 [↑](#bookmarks) [↓](#result-2)
 
 Check previous password status of **tux**
 
@@ -56,7 +86,9 @@ Check current password status of **tux**
 sudo grep tux /etc/shadow
 ```
 
-### Command 3
+<a name="command-3"/>
+
+### Command 3 [↑](#bookmarks) [↓](#result-3)
 
 Check user previous default shell
 
@@ -76,7 +108,9 @@ Check user current default shell
 grep tux /etc/passwd
 ```
 
-### Command 4
+<a name="command-4"/>
+
+### Command 4 [↑](#bookmarks) [↓](#result-4)
 
 Check previous **PASS_MAX_DAYS** of **tux**
 
@@ -96,9 +130,13 @@ Check current **PASS_MAX_DAYS** of **tux**
 sudo grep tux /etc/shadow
 ```
 
+<a name="results"/>
+
 ## Results
 
-### Command 1
+<a name="result-1"/>
+
+### Result of Command 1 [↑](#command-1)
 
 ```sh
 lynn@lynn-server:~$ sudo chage -l tux
@@ -122,7 +160,9 @@ Maximum number of days between password change		: 99999
 Number of days of warning before password expires	: 7
 ```
 
-### Command 2
+<a name="result-2"/>
+
+### Result of Command 2 [↑](#command-2)
 
 ```sh
 lynn@lynn-server:~$ sudo grep tux /etc/shadow
@@ -134,7 +174,9 @@ lynn@lynn-server:~$ sudo grep tux /etc/shadow
 tux:!encrypted_password:19672:0:99999:7:::
 ```
 
-### Command 3
+<a name="result-3"/>
+
+### Result of Command 3 [↑](#command-3)
 
 ```sh
 lynn@lynn-server:~$ grep tux /etc/passwd
@@ -146,7 +188,9 @@ lynn@lynn-server:~$ grep tux /etc/passwd
 tux:x:600:550::/home/tux:/bin/false
 ```
 
-### Command 4
+<a name="result-4"/>
+
+### Result of Command 4 [↑](#command-4)
 
 ```sh
 lynn@lynn-server:~$ sudo grep tux /etc/shadow
