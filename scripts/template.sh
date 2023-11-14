@@ -24,13 +24,12 @@ exec 3<> lesson_$lesson/$os/task_$task.md
     echo "\t\t- [Result of Command $i](#result-$i)" >&3
   done
   
+  echo '\n<a name="requirements"/>\n' >&3
+  echo '# Requirements\n' >&3
+  for i in `seq 1 $cmd`
+  do
+    echo "- " >&3
+  done
+exec 3>&-
 
 echo "File path: $(ls lesson_$lesson/$os/task_$task.md)";
-
-# <a name="bookmarks"/>
-
-# Bookmarks
-
-#- [Requirements](#requirements)
-
-#- [Solutions](#solutions)
