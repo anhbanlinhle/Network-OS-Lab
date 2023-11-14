@@ -1,3 +1,23 @@
+<a name="bookmarks"/>
+
+# Bookmarks
+
+- [Requirements](#requirements)
+
+- [Solutions](#solutions)
+
+  - [Commands](#commands)
+    - [Command 1](#command-1)
+    - [Command 2](#command-2)
+    - [Command 3](#command-3)
+
+  - [Results](#results)
+    - [Result of Command 1](#result-1)
+    - [Result of Command 2](#result-2)
+    - [Result of Command 3](#result-3)
+
+<a name="requirements"/>
+
 # Requirements
 
 - Tạo một nhóm có tên là `sales` với câu lệnh `groupadd`.
@@ -6,11 +26,17 @@
 
 - Đăng nhập với `tux` và tham gia vào nhóm `sales` với `newgrp`.
 
+<a name="solutions"/>
+
 # Solution
+
+<a name="commands"/>
 
 ## Commands
 
-### Command 1
+<a name="command-1"/>
+
+### Command 1 [↑](#bookmarks) [↓](#result-1)
 
 Create new group **sales**
 
@@ -24,7 +50,9 @@ Check if group **sales** created successfully
 grep sales /etc/group
 ```
 
-### Command 2
+<a name="command-2"/>
+
+### Command 2 [↑](#bookmarks) [↓](#result-2)
 
 Add user **tux** to group **sales**
 
@@ -38,7 +66,9 @@ Check if user **tux** was added to group **sales**
 groups tux
 ```
 
-### Command 3
+<a name="command-3"/>
+
+### Command 3 [↑](#bookmarks) [↓](#result-3)
 
 Activate **tux** to setup password
 
@@ -70,16 +100,22 @@ Check **tux**'s new groups order
 groups
 ```
 
+<a name="results"/>
+
 ## Results
 
-### Command 1
+<a name="result-1"/>
+
+### Result of Command 1 [↑](#command-1)
 
 ```sh
 lynn@lynn-server:~$ grep sales /etc/group
 sales:x:1003:tux
 ```
 
-### Command 2
+<a name="result-2"/>
+
+### Result of Command 2 [↑](#command-2)
 
 ```sh
 lynn@lynn-server:~$ sudo gpasswd -a tux sales
@@ -91,7 +127,9 @@ lynn@lynn-server:~$ groups tux
 tux : test_group wheel sales
 ```
 
-### Command 3
+<a name="result-3"/>
+
+### Result of Command 3 [↑](#command-3)
 
 ```sh
 lynn@lynn-server:~$ su - tux
