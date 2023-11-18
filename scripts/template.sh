@@ -11,8 +11,8 @@ exec 3<> lesson_$lesson/$os/task_$task.md
   echo '# Bookmarks\n' >&3
   echo '- [Requirements](#requirements)\n' >&3
   echo '- [Solutions](#solutions)\n' >&3
-  echo '\t- [Commands](#commands)' >&3
   
+  echo '\t- [Commands](#commands)' >&3
   for i in `seq 1 $cmd`
   do
     echo "\t\t- [Command $i](#command-$i)" >&3
@@ -33,9 +33,9 @@ exec 3<> lesson_$lesson/$os/task_$task.md
 
   echo '\n<a name="solutions"/>\n' >&3
   echo '# Solutions \n' >&3
+  
   echo '<a name="commands"/>\n' >&3
   echo '## Commands\n' >&3
-  
   for i in `seq 1 $cmd`
   do
     echo "<a name=\"command-$i\"/>\n" >&3
@@ -46,7 +46,6 @@ exec 3<> lesson_$lesson/$os/task_$task.md
   
   echo '<a name="results"/>\n' >&3
   echo '## Results\n' >&3
-
   for i in `seq 1 $cmd`
   do
     echo "<a name=\"result-$i\"/>\n" >&3
