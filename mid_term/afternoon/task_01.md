@@ -44,5 +44,7 @@ history | grep wc
 ### Result of Command 1 [↑](#command-1)
 
 ```sh
-executed command results
+lynn@lynn-server:~$ history | grep wc
+ 1068  history | grep wc
+ 1154  history | grep wc
 ```
