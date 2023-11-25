@@ -61,7 +61,7 @@ grep "user1\|user2\|user3" /etc/passwd
 Check home directories
 
 ```sh
-ls /home | grep "user1\|user2\|user3"
+ls -l /home | grep "user1\|user2\|user3"
 ```
 
 <a name="command-2"/>
@@ -77,7 +77,7 @@ mkdir f1 f2 f3
 Check if created successfully
 
 ```sh
-ls | grep "f1\|f2\|f3"
+ls -l | grep "f1\|f2\|f3"
 ```
 
 <a name="command-3"/>
@@ -161,7 +161,17 @@ ls /home | grep user3
 ### Result of Command 1 [↑](#command-1)
 
 ```sh
-executed command results
+lynn@lynn-server:~$ grep "user1\|user2\|user3" /etc/passwd
+user1:x:1125:1125::/home/user1:/bin/sh
+user2:x:1126:1126::/home/user2:/bin/sh
+user3:x:1127:1127::/home/user3:/bin/sh
+```
+
+```sh
+lynn@lynn-server:~$ ls -l /home | grep "user1\|user2\|user3"
+drwxr-x---  2 user1   user1      4096 Nov 25 13:42 user1
+drwxr-x---  2 user2   user2      4096 Nov 25 13:42 user2
+drwxr-x---  2 user3   user3      4096 Nov 25 13:42 user3
 ```
 
 <a name="result-2"/>
@@ -169,7 +179,10 @@ executed command results
 ### Result of Command 2 [↑](#command-2)
 
 ```sh
-executed command results
+lynn@lynn-server:~$ ls -l | grep "f1\|f2\|f3"
+drwxrwxr-x  2 lynn  lynn  4096 Nov 25 13:34 f1
+drwxrwxr-x  2 lynn  lynn  4096 Nov 25 13:34 f2
+drwxrwxr-x  2 lynn  lynn  4096 Nov 25 13:34 f3
 ```
 
 <a name="result-3"/>
@@ -177,7 +190,19 @@ executed command results
 ### Result of Command 3 [↑](#command-3)
 
 ```sh
-executed command results
+lynn@lynn-server:~$ ls -l | grep f1
+drwxrwxr-x  2 user1 user1 4096 Nov 25 13:34 f1
+```
+
+```sh
+lynn@lynn-server:~$ getfacl f1
+# file: f1
+# owner: user1
+# group: user1
+user::rwx
+group::rwx
+other::r-x
+
 ```
 
 <a name="result-4"/>
@@ -185,7 +210,21 @@ executed command results
 ### Result of Command 4 [↑](#command-4)
 
 ```sh
-executed command results
+lynn@lynn-server:~$ getfacl f2
+# file: f2
+# owner: lynn
+# group: lynn
+user::rwx
+user:user2:rw-
+group::rwx
+mask::rwx
+other::r-x
+default:user::rwx
+default:user:user2:rw-
+default:group::rwx
+default:mask::rwx
+default:other::r-x
+
 ```
 
 <a name="result-5"/>
@@ -193,5 +232,21 @@ executed command results
 ### Result of Command 5 [↑](#command-5)
 
 ```sh
-executed command results
+lynn@lynn-server:~$ grep user3 /etc/passwd
+user3:x:1127:1127::/home/user3:/bin/sh
+```
+
+```sh
+lynn@lynn-server:~$ ls -l /home | grep user3
+drwxr-x---  2 user3   user3      4096 Nov 25 13:42 user3
+```
+
+```sh
+lynn@lynn-server:~$ grep user3 /etc/passwd
+lynn@lynn-server:~$
+```
+
+```sh
+lynn@lynn-server:~$ ls -l /home | grep user3
+lynn@lynn-server:~$
 ```
