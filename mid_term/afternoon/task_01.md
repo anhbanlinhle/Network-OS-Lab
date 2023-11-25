@@ -32,7 +32,7 @@
 ### Command 1 [↑](#bookmarks) [↓](#result-1)
 
 ```sh
-command
+history | grep wc
 ```
 
 <a name="results"/>
