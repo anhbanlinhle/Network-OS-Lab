@@ -89,6 +89,12 @@ kill pid_2
 kill pid_3
 ```
 
+or 
+
+```sh
+kill pid_1 pid_2 pid_3
+```
+
 <a name="results"/>
 
 ## Results
@@ -98,7 +104,19 @@ kill pid_3
 ### Result of Command 1 [↑](#command-1)
 
 ```sh
-
+lynn@lynn-server:~$ sh loop1.sh &\
+> sh loop2.sh &\
+> sh loop3.sh &
+[1] 4078
+[2] 4079
+[3] 4080
+lynn@lynn-server:~$ “loop 1 ...”
+“loop 3 ...”
+“loop 2 ...”
+“loop 1 ...”
+“loop 2 ...”
+“loop 3 ...”
+...
 ```
 
 <a name="result-2"/>
@@ -106,6 +124,9 @@ kill pid_3
 ### Result of Command 2 [↑](#command-2)
 
 ```sh
-
+...
+[1]   Terminated              sh loop1.sh
+[2]-  Terminated              sh loop2.sh
+[3]+  Terminated              sh loop3.sh
 ```
 
