@@ -33,16 +33,32 @@
 
 ### Command 1 [↑](#bookmarks) [↓](#result-1)
 
-```sh
+Show top 10 process and their **NICE** value
 
+```sh
+ps axk -ni o pid,comm,ni | head -n 11
 ```
 
 <a name="command-2"/>
 
 ### Command 2 [↑](#bookmarks) [↓](#result-2)
 
-```sh
+Check process **top**'s **PID** and current **NICE** value
 
+```sh
+ps -C top o pid,comm,ni
+```
+
+Change process **top**'s **NICE** value
+
+```sh
+renice +1 4358
+```
+
+Check process **top**'s new **NICE** value
+
+```sh
+ps -C top o pid,comm,ni
 ```
 
 <a name="results"/>
