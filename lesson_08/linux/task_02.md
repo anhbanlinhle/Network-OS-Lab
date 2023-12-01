@@ -32,16 +32,45 @@
 
 ### Command 1 [↑](#bookmarks) [↓](#result-1)
 
-```sh
+Create file **findps.sh**
 
+```sh
+vi findps.sh
+```
+
+File content
+
+```sh
+read PID
+PID_NAME=$(ps o comm= -p $PID)
+P_PID=$(ps o ppid= -p $PID)
+PPID_NAME=$(ps o comm= -p $P_PID)
+
+printf "%-10s %-10s %-10s\n" "ROLE" "PID" "COMMAND"
+printf "%-10s %-10s %-10s\n" "Child" "$PID" "$PID_NAME"
+printf "%-10s %-10s %-10s\n" "Parent" "$(echo $P_PID | tr -s ' ')" "$PPID_NAME"
+```
+
+Make file executable
+
+```sh
+chmod a+x findps.sh
 ```
 
 <a name="command-2"/>
 
 ### Command 2 [↑](#bookmarks) [↓](#result-2)
 
-```sh
+Find process **top**'s **PID**
 
+```sh
+ps o pid= -C top
+```
+
+Run script with found **PID**
+
+```sh
+ps o pid= -C top | sh findps.sh 
 ```
 
 <a name="results"/>
