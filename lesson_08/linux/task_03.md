@@ -45,6 +45,17 @@ ps axk -pri o pid,comm,pri | head -n 11
 ### Result of Command 1 [↑](#command-1)
 
 ```sh
-
+lynn@lynn-server:~$ ps axk -pri o pid,comm,pri | head -n 11
+    PID COMMAND         PRI
+     48 khugepaged        0
+   3695 tracker-miner-f   0
+     47 ksmd             14
+   2687 rtkit-daemon     18
+      1 systemd          19
+      2 kthreadd         19
+     11 rcu_tasks_kthre  19
+     12 rcu_tasks_rude_  19
+     13 rcu_tasks_trace  19
+     14 ksoftirqd/0      19
 ```
 
