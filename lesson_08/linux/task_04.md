@@ -42,16 +42,51 @@ thái nền. Tắt từng tiến trình này
 
 ### Command 1 [↑](#bookmarks) [↓](#result-1)
 
-```sh
+`loop1.sh`'s content
 
+```sh
+while true; do
+	echo “loop 1 ...”
+	sleep 1
+done
+```
+
+`loop2.sh`'s content
+
+```sh
+while true; do
+	echo “loop 2 ...”
+	sleep 1
+done
+```
+
+`loop3.sh`'s content
+
+```sh
+while true; do
+	echo “loop 3 ...”
+	sleep 1
+done
+```
+
+Running 3 scripts in the background
+
+```sh
+sh loop1.sh &\
+sh loop2.sh &\
+sh loop3.sh &
 ```
 
 <a name="command-2"/>
 
 ### Command 2 [↑](#bookmarks) [↓](#result-2)
 
-```sh
+Kill 3 scripts's background processes
 
+```sh
+kill pid_1
+kill pid_2
+kill pid_3
 ```
 
 <a name="results"/>
