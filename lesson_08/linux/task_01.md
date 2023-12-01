@@ -70,7 +70,18 @@ ps -C top o pid,comm,ni
 ### Result of Command 1 [↑](#command-1)
 
 ```sh
-
+lynn@lynn-server:~$ ps axk -ni o pid,comm,ni | head -n 11
+    PID COMMAND          NI
+     48 khugepaged       19
+   3695 tracker-miner-f   -
+     47 ksmd              5
+   2687 rtkit-daemon      1
+      1 systemd           0
+      2 kthreadd          0
+      9 kworker/u8:0-fl   0
+     11 rcu_tasks_kthre   0
+     12 rcu_tasks_rude_   0
+     13 rcu_tasks_trace   0
 ```
 
 <a name="result-2"/>
@@ -78,6 +89,13 @@ ps -C top o pid,comm,ni
 ### Result of Command 2 [↑](#command-2)
 
 ```sh
-
+lynn@lynn-server:~$ ps -C top o pid,comm,ni
+    PID COMMAND          NI
+   3958 top               0
 ```
 
+```sh
+lynn@lynn-server:~$ ps -C top o pid,comm,ni
+    PID COMMAND          NI
+   3958 top               1
+```
