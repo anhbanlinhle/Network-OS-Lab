@@ -33,7 +33,7 @@
 ### Command 1 [↑](#bookmarks) [↓](#result-1)
 
 ```sh
-
+ps axk -pri o pid,comm,pri | head -n 11
 ```
 
 <a name="results"/>
