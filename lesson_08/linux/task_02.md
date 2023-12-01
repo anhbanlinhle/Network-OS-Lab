@@ -82,14 +82,41 @@ ps o pid= -C top | sh findps.sh
 ### Result of Command 1 [↑](#command-1)
 
 ```sh
+lynn@lynn-server:~$ ps o pid= -C top 
+   3958
+```
 
+Script can be adjust to receive **PID** directly from command
+
+```sh
+PID=$1
+PID_NAME=$(ps o comm= -p $PID)
+P_PID=$(ps o ppid= -p $PID)
+PPID_NAME=$(ps o comm= -p $P_PID)
+
+printf "%-10s %-10s %-10s\n" "ROLE" "PID" "COMMAND"
+printf "%-10s %-10s %-10s\n" "Child" "$PID" "$PID_NAME"
+printf "%-10s %-10s %-10s\n" "Parent" "$(echo $P_PID | tr -s ' ')" "$PPID_NAME"
 ```
 
 <a name="result-2"/>
 
 ### Result of Command 2 [↑](#command-2)
 
-```sh
+First way
 
+```sh
+lynn@lynn-server:~$ ps o pid= -C top | sh findps.sh 
+ROLE       PID        COMMAND   
+Child      3958       top       
+Parent     3951       bash   
 ```
 
+Second way
+
+```sh
+lynn@lynn-server:~$ sh findps.sh 3958
+ROLE       PID        COMMAND   
+Child      3958       top       
+Parent     3951       bash   
+```
