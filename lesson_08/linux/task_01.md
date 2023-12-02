@@ -103,6 +103,34 @@ lynn@lynn-server:~$ ps -C top o pid,comm,ni
 ```
 
 ```sh
+top - 23:20:42 up 2 min,  2 users,  load average: 1.10, 0.44, 0.16
+Tasks: 242 total,   1 running, 241 sleeping,   0 stopped,   0 zombie
+%Cpu(s): 16.7 us, 16.7 sy,  0.0 ni, 66.7 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+MiB Mem :  10373.9 total,   8366.8 free,   1164.1 used,   1139.0 buff/cache     
+MiB Swap:   4096.0 total,   4096.0 free,      0.0 used.   9209.8 avail Mem 
+PID to renice [default pid = 3178] 
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND  
+   3178 lynn      20   0 4568344 330816 131540 S  11.1   3.1   0:06.94 gnome-s+ 
+   3313 lynn      20   0 2584852  26136  21376 S   5.6   0.2   0:00.09 gjs      
+      1 root      20   0  168656  13012   8916 S   0.0   0.1   0:03.57 systemd  
+    ...
+```
+
+```sh
+top - 23:21:55 up 3 min,  2 users,  load average: 0.41, 0.36, 0.16
+Tasks: 229 total,   2 running, 227 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.2 us,  0.3 sy,  0.0 ni, 99.6 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+MiB Mem :  10373.9 total,   8419.3 free,   1057.8 used,   1191.4 buff/cache     
+MiB Swap:   4096.0 total,   4096.0 free,      0.0 used.   9316.0 avail Mem 
+Renice PID 3958 to value 
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND  
+   3178 lynn      20   0 4565940 331380 132308 S   1.3   3.1   0:10.25 gnome-s+ 
+   3706 lynn      20   0  216088   3100   2816 S   1.0   0.0   0:00.90 VBoxCli+ 
+     36 root      20   0       0      0      0 I   0.3   0.0   0:00.20 kworker+
+    ...
+```
+
+```sh
 lynn@lynn-server:~$ ps -C top o pid,comm,ni
     PID COMMAND          NI
    3958 top               1
