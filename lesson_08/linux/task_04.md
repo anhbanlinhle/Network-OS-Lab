@@ -136,3 +136,28 @@ lynn@lynn-server:~$ “loop 1 ...”
 [2]-  Terminated              sh loop2.sh
 [3]+  Terminated              sh loop3.sh
 ```
+
+```sh
+lynn@lynn-server:~$ “loop 1 ...”
+“loop 2 ...”
+“loop 3 ...”
+“loop 2 ...”
+“loop 1 ...”
+“loop 3 ...”
+fg
+sh loop3.sh
+“loop 2 ...”
+“loop 3 ...”
+“loop 1 ...”
+^C
+lynn@lynn-server:~$ fg
+“loop 2 ...”
+“loop 1 ...”
+sh loop2.sh
+^C
+lynn@lynn-server:~$ “loop 1 ...”
+fg
+sh loop1.sh
+^C
+lynn@lynn-server:~$ 
+```
