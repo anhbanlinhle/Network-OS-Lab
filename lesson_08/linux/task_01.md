@@ -55,6 +55,14 @@ Change process **top**'s **NICE** value
 renice +1 4358
 ```
 
+Or use **top** its self
+
+```sh
+top
+```
+
+Then press <kbd>r</kbd> to type **PID** and new **NICE** value
+
 Check process **top**'s new **NICE** value
 
 ```sh
