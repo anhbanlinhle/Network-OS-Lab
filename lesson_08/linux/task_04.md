@@ -81,7 +81,7 @@ sh loop3.sh &
 
 ### Command 2 [↑](#bookmarks) [↓](#result-2)
 
-Kill 3 scripts's background processes
+Kill 3 scripts's background processes 
 
 ```sh
 kill pid_1
@@ -94,6 +94,13 @@ or
 ```sh
 kill pid_1 pid_2 pid_3
 ```
+
+or
+```sh
+fg
+```
+
+then <kbd>Ctrl</kbd>+<kbd>C</kbd>
 
 <a name="results"/>
 
@@ -129,4 +136,3 @@ lynn@lynn-server:~$ “loop 1 ...”
 [2]-  Terminated              sh loop2.sh
 [3]+  Terminated              sh loop3.sh
 ```
-
