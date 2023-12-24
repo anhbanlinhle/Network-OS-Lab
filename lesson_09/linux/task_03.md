@@ -52,6 +52,14 @@ fi
 ### Result of Command 1 [↑](#command-1)
 
 ```sh
-
+lynn@lynn-server:~$ ./lab03.sh lab02.sh -1
+The line -1 is 
+fi
+lynn@lynn-server:~$ ./lab03.sh lab02.sh 5
+The line 5 is 
+echo "invalid"
+lynn@lynn-server:~$ ./lab03.sh lab02.sh 99
+The file have less than 99 lines
+lynn@lynn-server:~$
 ```
 
