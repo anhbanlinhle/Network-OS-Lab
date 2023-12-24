@@ -41,7 +41,7 @@ Hello world!
 ### Command 1 [↑](#bookmarks) [↓](#result-1)
 
 ```sh
-
+echo "Hello World!"
 ```
 
 <a name="results"/>
