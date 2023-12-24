@@ -64,6 +64,18 @@ fi
 ### Result of Command 1 [↑](#command-1)
 
 ```sh
-
+lynn@lynn-server:~$ ./lab04.sh
+Enter a number from 1000 to 50000: 
+999
+invalid number
+lynn@lynn-server:~$ ./lab04.sh
+Enter a number from 1000 to 50000: 
+1111
+1111 is a composite number
+lynn@lynn-server:~$ ./lab04.sh
+Enter a number from 1000 to 50000: 
+1117
+1117 is a prime number
+lynn@lynn-server:~$ 
 ```
 
