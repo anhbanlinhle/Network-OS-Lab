@@ -43,7 +43,30 @@ Kết quả ra màn hình sẽ là
 ### Command 1 [↑](#bookmarks) [↓](#result-1)
 
 ```sh
+a=$1
+b=$2
+o=$3
+if ( [ "$o" = "/" ] || [ "$o" = "%" ] ) && [ $b -eq 0 ]; then
+	echo "invalid"
+else
+	echo -n "$a $o $b = "
 
+	if [ "$o" = "+" ]; then 
+		echo $(($a + $b))
+	elif [ "$o" = "-" ]; then
+		echo $(($a - $b))
+	elif [ "$o" = "x" ]; then
+		echo $(($a * $b))
+	elif [ "$o" = "/" ]; then
+		echo $(($a / $b))
+	elif [ "$o" = "%" ]; then    
+		echo $(($a % $b))
+	elif [ "$o" = "^" ]; then
+		echo $(($a ** $b))
+	else
+		echo "invalid"
+	fi
+fi
 ```
 
 <a name="results"/>
