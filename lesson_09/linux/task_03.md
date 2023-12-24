@@ -31,7 +31,16 @@
 ### Command 1 [↑](#bookmarks) [↓](#result-1)
 
 ```sh
-
+if [ -e $1 ]; then
+    total=$(wc -l < $1)
+    if [ $2 -le $total ]; then
+        res=$(head -n $2 $1 | tail -n 1)
+	echo "The line $2 is "
+	echo $res
+    else
+	echo "The file have less than $2 lines"
+    fi	
+fi
 ```
 
 <a name="results"/>
