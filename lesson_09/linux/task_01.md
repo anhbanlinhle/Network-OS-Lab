@@ -53,6 +53,7 @@ echo "Hello World!"
 ### Result of Command 1 [↑](#command-1)
 
 ```sh
-
+lynn@lynn-server:~$ sh lab01.sh
+Hello World!
 ```
 
