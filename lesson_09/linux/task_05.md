@@ -65,6 +65,18 @@ echo "Largest fibbonacci smaller than input $num"
 ### Result of Command 1 [↑](#command-1)
 
 ```sh
-
+lynn@lynn-server:~$ ./lab05.sh
+Enter a number from 1000 to 5000: 
+5001
+The number entered is invalid
+lynn@lynn-server:~$ ./lab05.sh
+Enter a number from 1000 to 5000: 
+1000
+Largest fibbonacci smaller than input 987
+lynn@lynn-server:~$ ./lab05.sh
+Enter a number from 1000 to 5000: 
+1600
+Largest fibbonacci smaller than input 1597
+lynn@lynn-server:~$ 
 ```
 
