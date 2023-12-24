@@ -78,6 +78,24 @@ fi
 ### Result of Command 1 [↑](#command-1)
 
 ```sh
-
+lynn@lynn-server:~$ ./lab02.sh 2 3 +
+2 + 3 = 5
+lynn@lynn-server:~$ ./lab02.sh 2 3 -
+2 - 3 = -1
+lynn@lynn-server:~$ ./lab02.sh 2 3 x
+2 x 3 = 6
+lynn@lynn-server:~$ ./lab02.sh 2 3 /
+2 / 3 = 0
+lynn@lynn-server:~$ ./lab02.sh 2 3 %
+2 % 3 = 2
+lynn@lynn-server:~$ ./lab02.sh 2 3 ^
+2 ^ 3 = 8
+lynn@lynn-server:~$ ./lab02.sh 2 0 /
+invalid
+lynn@lynn-server:~$ ./lab02.sh 2 0 %
+invalid
+lynn@lynn-server:~$ ./lab02.sh 2 3 =
+2 = 3 = invalid
+lynn@lynn-server:~$ 
 ```
 
