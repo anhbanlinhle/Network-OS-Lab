@@ -32,7 +32,28 @@
 ### Command 1 [↑](#bookmarks) [↓](#result-1)
 
 ```sh
+echo "Enter a number from 1000 to 5000: "; read A
 
+if [ $A -lt 1000 ] || [ $A -gt 5000 ]; then
+	echo "The number entered is invalid"
+	exit
+fi
+
+num=0
+num1=0
+num2=1
+
+while [ $num -lt $A ]; do
+    if [ $((num1 + num2)) -lt $A ]; then
+        num=$((num1 + num2))
+        num1=$num2
+        num2=$num
+    else
+        break
+    fi
+done
+
+echo "Largest fibbonacci smaller than input $num"
 ```
 
 <a name="results"/>
