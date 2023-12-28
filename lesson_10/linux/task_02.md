@@ -36,52 +36,124 @@
 
 ## Commands
 
+### Prerequisites
+
+Install FTP daemon
+
+```sh
+sudo apt install vsftpd
+```
+
 <a name="command-1"/>
 
 ### Command 1 [↑](#bookmarks) [↓](#result-1)
 
-```sh
+Config FTP
 
+```sh
+sudo vi /etc/vsftpd.conf
+```
+
+File content
+
+```sh
+anonymous_enable=YES
+anon_upload_enable=YES
+write_enable=YES
+chroot_local_user=YES
+allow_writeable_chroot=YES
+```
+
+Restart service after configuration
+
+```sh
+sudo service vsftpd restart
 ```
 
 <a name="command-2"/>
 
 ### Command 2 [↑](#bookmarks) [↓](#result-2)
 
-```sh
+Config file to allow anonymous
 
+```sh
+anonymous_enable=YES
+```
+
+Login as anonymous
+
+```sh
+ftp localhost
+```
+
+Download file from server
+
+```sh
+get anon.txt
 ```
 
 <a name="command-3"/>
 
 ### Command 3 [↑](#bookmarks) [↓](#result-3)
 
-```sh
+Login as user
 
+```sh
+ftp localhost
+```
+
+Download file from server
+
+```sh
+get server_data.txt
 ```
 
 <a name="command-4"/>
 
 ### Command 4 [↑](#bookmarks) [↓](#result-4)
 
-```sh
+Login as server
 
+```sh
+ftp localhost
+```
+
+Upload file to server
+
+```sh
+put client_data.txt
 ```
 
 <a name="command-5"/>
 
 ### Command 5 [↑](#bookmarks) [↓](#result-5)
 
-```sh
+Config file to allow change directory
 
+```sh
+chroot_local_user=NO
+```
+
+Attempt to change directory
+
+```sh
+cd /home/user1
 ```
 
 <a name="command-6"/>
 
 ### Command 6 [↑](#bookmarks) [↓](#result-6)
 
-```sh
+Config file to forbid change directory
 
+```sh
+chroot_local_user=YES
+```
+
+Attempt to change directory
+
+```sh
+cd /home/user1
 ```
 
 <a name="results"/>
