@@ -165,7 +165,20 @@ cd /home/user1
 ### Result of Command 1 [↑](#command-1)
 
 ```sh
+lynn@lynn-server:~$ sudo service vsftpd status
+● vsftpd.service - vsftpd FTP server
+     Loaded: loaded (/lib/systemd/system/vsftpd.service; enabled; preset: enabled)
+     Active: active (running) since Thu 2023-12-28 22:59:03 +07; 5s ago
+    Process: 5065 ExecStartPre=/bin/mkdir -p /var/run/vsftpd/empty (code=exited, status=0/SUCCESS)
+   Main PID: 5067 (vsftpd)
+      Tasks: 1 (limit: 12292)
+     Memory: 856.0K
+        CPU: 9ms
+     CGroup: /system.slice/vsftpd.service
+             └─5067 /usr/sbin/vsftpd /etc/vsftpd.conf
 
+Dec 28 22:59:03 lynn-server systemd[1]: Starting vsftpd.service - vsftpd FTP server...
+Dec 28 22:59:03 lynn-server systemd[1]: Started vsftpd.service - vsftpd FTP server.
 ```
 
 <a name="result-2"/>
@@ -173,7 +186,31 @@ cd /home/user1
 ### Result of Command 2 [↑](#command-2)
 
 ```sh
-
+lynn@lynn-server:~$ ls -l | grep anon.txt
+lynn@lynn-server:~$ ftp localhost
+Connected to localhost.
+220 (vsFTPd 3.0.5)
+Name (localhost:lynn): ftp
+331 Please specify the password.
+Password: 
+230 Login successful.
+Remote system type is UNIX.
+Using binary mode to transfer files.
+ftp> ls
+229 Entering Extended Passive Mode (|||8996|)
+150 Here comes the directory listing.
+-rw-r--r--    1 0        0               0 Dec 17 17:19 anon.txt
+226 Directory send OK.
+ftp> get anon.txt
+local: anon.txt remote: anon.txt
+229 Entering Extended Passive Mode (|||17396|)
+150 Opening BINARY mode data connection for anon.txt (0 bytes).
+     0        0.00 KiB/s 
+226 Transfer complete.
+ftp> exit
+221 Goodbye.
+lynn@lynn-server:~$ ls -l | grep anon.txt
+-rw-rw-r--  1 lynn   lynn       0 Dec 18 00:19 anon.txt
 ```
 
 <a name="result-3"/>
@@ -181,7 +218,28 @@ cd /home/user1
 ### Result of Command 3 [↑](#command-3)
 
 ```sh
-
+lynn@lynn-server:~$ ls -l | grep server_data.txt
+lynn@lynn-server:~$ ftp localhost
+Connected to localhost.
+220 (vsFTPd 3.0.5)
+Name (localhost:lynn): lynn
+331 Please specify the password.
+Password: 
+230 Login successful.
+Remote system type is UNIX.
+Using binary mode to transfer files.
+ftp> cd server
+250 Directory successfully changed.
+ftp> get server_data.txt
+local: server_data.txt remote: server_data.txt
+229 Entering Extended Passive Mode (|||54562|)
+150 Opening BINARY mode data connection for server_data.txt (0 bytes).
+     0        0.00 KiB/s 
+226 Transfer complete.
+ftp> exit
+221 Goodbye.
+lynn@lynn-server:~$ ls -l | grep server_data.txt
+-rw-rw-r--  1 lynn   lynn       0 Dec 29  2023 server_data.txt
 ```
 
 <a name="result-4"/>
@@ -189,7 +247,38 @@ cd /home/user1
 ### Result of Command 4 [↑](#command-4)
 
 ```sh
-
+lynn@lynn-server:~$ ftp localhost
+Connected to localhost.
+220 (vsFTPd 3.0.5)
+Name (localhost:lynn): lynn
+331 Please specify the password.
+Password: 
+230 Login successful.
+Remote system type is UNIX.
+Using binary mode to transfer files.
+ftp> cd server
+250 Directory successfully changed.
+ftp> ls
+229 Entering Extended Passive Mode (|||53461|)
+150 Here comes the directory listing.
+-rw-rw-r--    1 1000     1000            0 Dec 28 23:02 server_data.txt
+226 Directory send OK.
+ftp> put client_data.txt
+local: client_data.txt remote: client_data.txt
+229 Entering Extended Passive Mode (|||60585|)
+150 Ok to send data.
+100% |*******************************************************************************************************************************************************|    13       64.44 KiB/s    00:00 ETA
+226 Transfer complete.
+13 bytes sent in 00:00 (20.21 KiB/s)
+ftp> ls
+229 Entering Extended Passive Mode (|||32406|)
+150 Here comes the directory listing.
+-rw-------    1 1000     1000           13 Dec 28 23:03 client_data.txt
+-rw-rw-r--    1 1000     1000            0 Dec 28 23:02 server_data.txt
+226 Directory send OK.
+ftp> exit
+221 Goodbye.
+lynn@lynn-server:~$ 
 ```
 
 <a name="result-5"/>
@@ -197,7 +286,23 @@ cd /home/user1
 ### Result of Command 5 [↑](#command-5)
 
 ```sh
-
+lynn@lynn-server:~$ ftp localhost
+Connected to localhost.
+220 (vsFTPd 3.0.5)
+Name (localhost:lynn): lynn
+331 Please specify the password.
+Password: 
+230 Login successful.
+Remote system type is UNIX.
+Using binary mode to transfer files.
+ftp> pwd
+Remote directory: /home/lynn
+ftp> cd /home/user1
+250 Directory successfully changed.
+ftp> pwd
+Remote directory: /home/user1
+ftp> exit
+221 Goodbye.
 ```
 
 <a name="result-6"/>
@@ -205,6 +310,20 @@ cd /home/user1
 ### Result of Command 6 [↑](#command-6)
 
 ```sh
-
+lynn@lynn-server:~$ ftp localhost
+Connected to localhost.
+220 (vsFTPd 3.0.5)
+Name (localhost:lynn): lynn
+331 Please specify the password.
+Password: 
+230 Login successful.
+Remote system type is UNIX.
+Using binary mode to transfer files.
+ftp> pwd
+Remote directory: /
+ftp> cd /home/user1
+550 Failed to change directory.
+ftp> exit
+221 Goodbye.
 ```
 
