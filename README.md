@@ -1,39 +1,15 @@
 # Practice Shell commands for Network operating system lab homework
 
-<h3>Disclaimer</h3>
+### Disclaimer
 
-\- *This repo was created for educational purpose* <br/>
-\- *The original homework requirement was to practice on Ubuntu server OS* <br/>
-\- *But since I used Macbook, I'll try to accomplish these homework in both approach:* <br/>
-&nbsp;&nbsp;› *`Ubuntu` using `bash`* <br/>
-&nbsp;&nbsp;› *`MacOS` using `zsh`*
+- *This repo was created for educational purpose only*
+- *The original homework requirement was to practice on Ubuntu server OS* 
+- *Exercises are attempted to accomplish in*
 
-<h3>Usage</h3>
+  › *`Ubuntu` using `bash`* <br/>
 
-Run the following commands:
+  › *`MacOS` using `zsh`*
 
-<br>
+- *There are many methods to sastistify the requirements, try your own ways before reading the solutions in this repo*
 
-```sh
-./scripts/lesson.sh
-```
-or
-```sh
-mkdir lesson_xx lesson_xx/linux lesson_xx/macos
-```
-to create a new directory structure for your lesson
-- `xx`: lesson's index 
-<br>
-<br>
-
-```sh
-./scripts/task.sh
-```
-or
-```sh
-cp TEMPLATE.md lesson_xx/os/task_yy.md
-```
-to create a markdown file from template for your task
-- `xx`: lesson's index
-- `os`: `linux`/`macos`
-- `yy`: task's index
+- *These solution were given for free, do not attempt to sell it*
