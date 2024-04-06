@@ -168,6 +168,7 @@ The key's randomart image is:
 Include /etc/ssh/sshd_config.d/*.conf
 
 PubkeyAuthentication yes
+PermitRootLogin yes
 AuthorizedKeysFile .ssh/authorized_keys
 AllowUsers user01 root
 
