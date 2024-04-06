@@ -70,6 +70,7 @@ File Content
 ...
 
 PubkeyAuthentication yes
+PermitRootLogin yes
 AuthorizedKeysFile .ssh/authorized_keys
 AllowUsers user01 root
 
